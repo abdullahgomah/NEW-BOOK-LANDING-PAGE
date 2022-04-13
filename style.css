@@ -25,7 +25,8 @@
     top: 50%; 
     transform: translateX(-50%) skew(0, -10deg); 
     border-radius: 50%; 
-    animation: waving 2s alternate ease-in-out infinite;
+    z-index: -1;
+    animation: waving 10s alternate ease-in-out infinite;
 }
 
 
@@ -35,5 +36,85 @@
     }
     to {
         transform: translateX(-50%) skew(-10deg, 0deg); 
+    }
+}
+
+.card {
+    width: 35%; 
+    text-align: center;
+    background-color: #212121;
+    min-height: 100%;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 2px 2px 20px .20px #f9f9f98b;
+    line-height: 30px;
+    /* top:50%;  */
+    /* transform: translateY(50%); */
+}
+
+.card * {
+    margin: 20px 0px;
+}
+
+.card-title {
+    color: #fff; 
+    font-size: 45px;
+    text-shadow: 2px 2px 10px #000;
+    font-weight: bold;
+    font-family: 'Rakkas', cursive;
+}
+
+.card-description {
+    color: white;
+    font-family: 'Rakkas', cursive;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.button {
+    padding: 15px 20px; 
+    background: rgb(255, 0, 43);
+    margin: 15px 0px;
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.511);
+    border-radius: 4px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Rakkas', cursive;
+    font-size: 30px;
+    /* font-size: 20px; */
+}
+
+.card-img {
+    width: 100%; 
+    display: block;
+}
+
+.red {
+    color: rgb(255, 0, 43);
+}
+
+.hidden {
+    font-size: 60px;
+    text-align: center;
+    color: #fff; 
+    font-family: "Rakkas", cursive;
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%; 
+    }
+    .container {
+        padding: 10px;
     }
 }
