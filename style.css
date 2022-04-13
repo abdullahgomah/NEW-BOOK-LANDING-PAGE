@@ -1,0 +1,39 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 100%; 
+    width: 100%;
+    position: relative;
+    background: #212121;
+    overflow: hidden;
+}
+
+
+.container::before {
+    content: "";
+    position: fixed; 
+    width: 300%; 
+    height: 100%; 
+    background: #0075ff;
+    left:50%; 
+    top: 50%; 
+    transform: translateX(-50%) skew(0, -10deg); 
+    border-radius: 50%; 
+    animation: waving 2s alternate ease-in-out infinite;
+}
+
+
+@keyframes waving {
+    from {
+        transform: translateX(-50%) skew(0, -10deg); 
+    }
+    to {
+        transform: translateX(-50%) skew(-10deg, 0deg); 
+    }
+}
